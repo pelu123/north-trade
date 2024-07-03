@@ -1,0 +1,78 @@
+.navbar-container {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: -6px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(175, 169, 169);
+  height: 60px;
+  margin: 6px;
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  justify-content: flex-end;
+}
+
+.navbar-logo {
+  display: flex;
+  max-height: 42px;
+  margin-top: 8px;
+  margin-right: auto;
+  margin-left: 12px;
+}
+
+.navbar-list-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.navbar-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.navbar-list-item :hover{
+  color: rgb(172, 12, 12);
+}
+
+.navbar-button-container {
+  display: flex; 
+  flex-direction: row;
+  margin-left: 35%;
+}
+
+.navbar-button {
+  background-color: rgb(104, 104, 104, 0.5);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 19px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.navbar-button-container :hover {
+  background-color: rgb(133, 37, 37);
+  border: 1px solid rgb(133, 37, 37);
+}
