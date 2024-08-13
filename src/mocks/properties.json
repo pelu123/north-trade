@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Campo en Las Lajitas",
+    "location": "Las Lajitas, Salta, Argentina",
+    "surface": "1000 has",
+    "detailed location": "Este hermoso terreno se encuentra estratégicamente ubicado a solo 7 kilómetros al este de Río del Valle, sobre la Ruta Provincial Nº5. Además, está a 16 kilómetros de Las Lajitas y a 200 kilómetros de la Ciudad de Salta.",
+    "description": "Se trata de una interesante fracción muy bien ubicada y totalmente desmontada, con excelente aptitud para agricultura, hoy con soja en directa. Se cultiva soja, maíz, porotos, cártamo y sorgo con muy buenos rendimientos.",
+    "rainy regime": "700 a 900 mm anuales",
+    "image": "/properties/lajitas1000has.png"
+  }
+]

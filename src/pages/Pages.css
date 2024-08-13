@@ -1,11 +1,12 @@
 .inicio-main-section {
   display: flex;
   flex-direction: column;
+  max-height: 625px;
   margin-top: 10px;
   margin-left: 6px;
   margin-right: 6px;
   border-radius: 19px;
-  align-items: left;
+  align-items: center;
   height: 100vh;
   max-height: auto;
   background-repeat: no-repeat;
@@ -16,25 +17,28 @@
 .header-info-container {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  margin-top: 10%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7%;
   max-width: 55%;
   margin-left: 6px;
   margin-bottom: 10px;
+  background: fixed;
+  background-color: rgba(0, 0, 0, 0.384);
 }
 
 .header-title {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
   margin-left: 6px;
   font-size: 40px;
   line-height: 48px;
-  color: rgb(163, 20, 20);
+  color: rgb(119, 0, 0);
 }
 
 .header-description {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight:bold;
     font-size: 20px; 
@@ -46,7 +50,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -56,5 +60,71 @@
   flex-direction: row;
   align-items: center;
   font-family: "Noto Sans", sans-serif;
- margin-right: 10px;
+  margin-right: 10px;
+  background-color: rgb(119, 0, 0);
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 38px;
+  line-height: 48px;
+  color: rgb(119, 0, 0);
+}
+
+.destacadas-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.contacto-section {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 6px;
+  margin-right: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.contacto-text-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  padding: 20px;
+  
+}
+
+.contacto-text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 8px;
+  flex-grow: 1;
+}
+
+.cta-contacto-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-top: 100px;
+  
+  border-radius: 5px;
+  color: rgb(81, 81, 236);
 }

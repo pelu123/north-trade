@@ -1,7 +1,10 @@
 import "./Pages.css"
+import "../App.css"
 import viñedo from "../assets/viñedo.jpg"
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import Destacadas from "../components/Inicio/Destacadas";
+import ContactForm from "../components/ContactForm";
 
 export default function Inicio() {
     return (
@@ -26,18 +29,41 @@ export default function Inicio() {
                 molestias consectetur eligendi sed error maiores ea.
               </p>
               <div className="header-buttons">
-                <Button className="button-rurales">
-                    <Link to="/propiedades">
-                        <p>Propiedades rurales</p>
-                    </Link>
+                <Button className="button-rurales bg-[rgb(119,0,0)] text-white">
+                  <Link to="/propiedades">
+                    <p>Propiedades rurales</p>
+                  </Link>
                 </Button>
                 <Button className="button-contacto">
-                    <Link to="/contacto">
-                        <p>Contacto</p>
-                    </Link>
+                  <Link to="/contacto">
+                    <p>Contactanos</p>
+                  </Link>
                 </Button>
               </div>
             </div>
+          </section>
+          <section className="destacadas-section">
+            <h2 className="title">Propiedades destacadas</h2>
+            <Destacadas />
+          </section>
+          <section className="contacto-section">
+            <div className="contacto-text-section">
+              <h2 className="title">¡Contáctanos hoy mismo!</h2>
+              <p className="contacto-text">
+                ¿Interesado en alguna de nuestras propiedades rurales? Estamos
+                aquí para ayudarte. Completa el formulario de contacto con tus
+                datos y detalles sobre la propiedad que te interesa. Nuestro
+                equipo se pondrá en contacto contigo a la brevedad para
+                brindarte toda la información que necesitas. ¡Esperamos saber de
+                ti pronto!
+              </p>
+              <Button className="cta-contacto-button bg-teal-600 text-white">
+                <Link to="/propiedades">
+                  <p>Explora más propiedades</p>
+                </Link>  
+              </Button>              
+            </div>
+            <ContactForm />
           </section>
         </div>
       </>
