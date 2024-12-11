@@ -1,11 +1,13 @@
 .destacadas-cards-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 16px;
+    margin-top: 25px;
 }
 
 .destacadas-card {
+    background-color: rgb(224, 224, 224);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     padding: 16px;

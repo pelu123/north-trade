@@ -5,8 +5,34 @@
     "location": "Las Lajitas, Salta, Argentina",
     "surface": "1000 has",
     "detailed location": "Este hermoso terreno se encuentra estratégicamente ubicado a solo 7 kilómetros al este de Río del Valle, sobre la Ruta Provincial Nº5. Además, está a 16 kilómetros de Las Lajitas y a 200 kilómetros de la Ciudad de Salta.",
-    "description": "Se trata de una interesante fracción muy bien ubicada y totalmente desmontada, con excelente aptitud para agricultura, hoy con soja en directa. Se cultiva soja, maíz, porotos, cártamo y sorgo con muy buenos rendimientos.",
-    "rainy regime": "700 a 900 mm anuales",
+    "description": "Se trata de una interesante fracción muy bien ubicada y totalmente desmontada, con excelente aptitud para agricultura, hoy con soja en directa. Se cultiva soja, maíz, porotos, cártamo y sorgo con muy buenos rendimientos. Además, cuenta con un régimen de lluvia de unos 700 a 900 mm anuales.",
     "image": "/properties/lajitas1000has.png"
+  },
+  {
+    "id": 2,
+    "name": "Campo en San Carlos",
+    "location": "San Carlos, Salta, Argentina",
+    "surface": "1000 has",
+    "detailed location": "Se encuentra a 900 metros al oeste del pueblo de San Carlos, sobre el camino a San Lucas. Ubicado a 25 km de Cafayate, y 230 km de la Ciudad de Salta.",
+    "description": "Este campo cuenta con 50 has limpias donde se cultivan especies y aromáticas, con posibilidad para desarrollar un total de 300 has para viñedos de alta calidad. El resto de la superficie es monte con vegetación característica de la zona. Cuenta con: dos pozos de 60 y 100 mil litros/hora, alambrados, energia electrica, titulos perfectos y exelentes vistas.",
+    "image": "/properties/sanCarlos1000has.png"
+  },
+  {
+    "id": 3,
+    "name": "Campo en Oran",
+    "location": "Oran, Salta, Argentina",
+    "surface": "1200 has",
+    "detailed location": "El terreno se encuentra ubicado sobre la ruta Provincial Nº5, a altura de la Estacion Chaguaral, a 50 km de la localidad de Las Lajitas y a 250 km de la Ciudad de Salta.",
+    "description": "Se trata de tierras planas con 300 has desmontadas, donde se produce poroto y maiz. El resto de la superficie tiene un monte tipico de la zona. Este esta poblado con quebracho colorado y blanco, mistol y algarrobo. Además, cuenta con un régimen de lluvia de unos 700 mm anuales.",
+    "image": "/properties/chaguaral1200has.png"
+  },
+  {
+    "id": 4,
+    "name": "Bodega El Transito",
+    "location": "Cafayate, Salta, Argentina",
+    "surface": "Ocupa 2170 m2 de terreno.",
+    "detailed location": "",
+    "description": "Se trata de una empresa vitivinicola con bodega de moderna construcción ubicada en el centro de la ciudad de Cafayate, y que cuenta con viñedos propios. Comprende de tres sectores: Bodega, Viñedos y Comercialización.",
+    "image": "/properties/elTransitoBodega.png"
   }
 ]

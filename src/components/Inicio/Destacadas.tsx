@@ -8,7 +8,6 @@ type Properties = {
     "surface": string,
     "detailed location": string,
     "description": string,
-    "rainy regime": string,
     image: string
 }
 
@@ -17,9 +16,9 @@ export default function Destacadas() {
     return (
         <>           
             <div className="destacadas-cards-container">
-                <div className="destacadas-card">
+                
                 {properties.map((property: Properties) => (
-                    <div className="destacadas-card-content" key={property.id}>
+                    <div className="destacadas-card" key={property.id}>
                         <div className="destacadas-card-image">
                             <img src={property.image}  />                            
                         </div>
@@ -33,9 +32,8 @@ export default function Destacadas() {
                         </div>
                     </div>
                 ))}
-                </div>
-            </div>
-        
+                
+            </div>        
         </>
     )
 }

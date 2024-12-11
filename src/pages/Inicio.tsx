@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Destacadas from "../components/Inicio/Destacadas";
 import ContactForm from "../components/ContactForm";
 
+
 export default function Inicio() {
     return (
       <>
@@ -46,10 +47,23 @@ export default function Inicio() {
             <h2 className="title">Propiedades destacadas</h2>
             <Destacadas />
           </section>
+          <section className="about-us-section">
+            <h2 className="title">¿Quiénes somos?</h2>
+            <div className="about-us-text">
+              <p className="text">
+              Somos una empresa inmobiliaria rural, con larga experiencia en la
+              compra y venta de campos en la provincia de Salta. Aseguramos
+              seriedad, profesionalidad y absoluta reserva. Contamos con la
+              estructura y logística necesaria para brindar un asesoramiento
+              integral del negocio inmobiliario.
+            </p>
+            </div>
+            
+          </section>
           <section className="contacto-section">
             <div className="contacto-text-section">
               <h2 className="title">¡Contáctanos hoy mismo!</h2>
-              <p className="contacto-text">
+              <p className="text">
                 ¿Interesado en alguna de nuestras propiedades rurales? Estamos
                 aquí para ayudarte. Completa el formulario de contacto con tus
                 datos y detalles sobre la propiedad que te interesa. Nuestro
