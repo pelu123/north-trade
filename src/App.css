@@ -78,3 +78,60 @@
   background-color: rgb(133, 37, 37);
   border: 1px solid rgb(133, 37, 37);
 }
+
+.footer-container {
+  background-color: rgb(133, 37, 37);
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-content {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-routes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10px;
+  color: #000;
+  font-weight: 400;
+  width: 33%;
+}
+
+.social-media-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 250%;
+  color: #000;
+  font-weight: 400;
+}
+
+.insta-button, .facebook-button {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+}
+.insta-button, .facebook-button p {
+  margin-left: 3px;
+}
+
+@media (max-width: 550px) {
+  .social-media-links {
+    margin-left: 90px;
+  }
+}
+
+@media (max-width: 750px) {
+  .social-media-links {
+    margin-left: 160px;
+  }
+}

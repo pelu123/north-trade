@@ -3,7 +3,7 @@ import "../App.css"
 import viñedo from "../assets/viñedo.jpg"
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
-import Destacadas from "../components/Inicio/Destacadas";
+import DestacadasWrapper from "../components/Inicio/DestacadasWrapper";
 import ContactForm from "../components/ContactForm";
 
 
@@ -22,12 +22,6 @@ export default function Inicio() {
               </h1>
               <p className="header-description">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Laudantium quos voluptatibus aliquam et ducimus voluptate
-                aliquid cum, repellendus molestiae sunt a corporis nihil, nulla
-                nesciunt magnam ipsum libero! Vel, excepturi. Nisi, quae vitae
-                voluptatum architecto voluptas rem rerum natus, explicabo sunt
-                odit dolorem et saepe delectus quas sint blanditiis atque
-                molestias consectetur eligendi sed error maiores ea.
               </p>
               <div className="header-buttons">
                 <Button className="button-rurales bg-[rgb(119,0,0)] text-white">
@@ -45,7 +39,7 @@ export default function Inicio() {
           </section>
           <section className="destacadas-section">
             <h2 className="title">Propiedades destacadas</h2>
-            <Destacadas />
+            <DestacadasWrapper />
           </section>
           <section className="about-us-section">
             <h2 className="title">¿Quiénes somos?</h2>
@@ -57,8 +51,7 @@ export default function Inicio() {
               estructura y logística necesaria para brindar un asesoramiento
               integral del negocio inmobiliario.
             </p>
-            </div>
-            
+            </div>                        
           </section>
           <section className="contacto-section">
             <div className="contacto-text-section">

@@ -1,16 +1,27 @@
-.destacadas-slider-container { 
+.destacadas-container {
+    width: 100%;
     position: relative;
-    width: 100%; 
     overflow: hidden;
-    
+    margin-bottom: -20px;   
+}
+
+.destacadas-slider-container { 
+    display: flex;
+    transition: all 0.3s ease;
+    gap: 1rem;
+    max-width: 95%;
 }
 
 .destacadas-cards-container {
     display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-content: center;
     transition: transform 0.5s ease-in-out;
 }
 
 .destacadas-card {
+    flex-shrink: 0;
     background-color: rgb(224, 224, 224);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
@@ -69,8 +80,9 @@
 
 .destacadas-slider-buttons {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     margin-right: 10px;
+    margin-top: 50px;
     padding: 5px;
 }
 
@@ -90,21 +102,15 @@
 
 .next-button { right: 10px; }
 
-@media (max-width: 900px) { 
-    .destacadas-card { 
-        flex: 0 0 25%; 
-    } 
-} 
-
-@media (max-width: 700px) { 
-    .destacadas-card { 
-        flex: 0 0 33.33%; 
-    } 
-} 
-
-@media (max-width: 500px) { 
-    .destacadas-card { 
-        flex: 0 0 50%; 
-    } 
-}
+@media (max-width: 750px) {
+    .destacadas-cards-container {
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .destacadas-cards-container {
+      gap: 10px;
+    }
+  }
 

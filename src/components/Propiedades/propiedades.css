@@ -1,0 +1,132 @@
+/* propiedades.css */
+.propiedades-cards-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.propiedades-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 10px;
+    gap: 20px; /* Espacio entre las cards */
+}
+
+.propiedades-card {
+    flex: 0 0 auto;
+    position: relative;
+    width: 200px; /* Ancho mínimo de cada card */
+    height: 300px; /* Altura de cada card */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.propiedades-card:hover {
+    transform: scale(1.1); /* Efecto de zoom al hacer hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra al hacer hover */
+}
+
+.propiedades-card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Slider styles*/
+.propiedades-slider-container {
+    padding: 20px 40px;
+    position: relative;
+    display: flex;
+    align-items: center; /* Centra verticalmente los botones y el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.propiedades-slider-content {
+    width: 100%; /* Ajusta el ancho del contenido */
+    overflow: hidden; /* Oculta el desbordamiento de las cards */
+}
+
+
+/* Botones de navegación */
+.propiedades-prev-button,
+.propiedades-next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.propiedades-prev-button:hover,
+.propiedades-next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.propiedades-prev-button {
+    left: 10px;
+}
+
+.propiedades-next-button {
+    right: 10px;
+}
+
+/*Responsive styles*/
+@media (max-width: 550px) {
+    .propiedades-card {
+        width: calc((100% - 20px) / 2); /* 2 cards por vista */
+    }
+}
+
+@media (min-width: 551px) and (max-width: 750px) {
+    .propiedades-card {
+        width: calc((100% - 40px) / 3); /* 3 cards por vista */
+    }
+}
+
+@media (min-width: 751px) and (max-width: 850px) {
+    .propiedades-card {
+        width: calc((100% - 60px) / 4); /* 4 cards por vista */
+    }
+}
+
+@media (min-width: 851px) {
+    .propiedades-card {
+        width: calc((100% - 100px) / 6); /* 6 cards por vista */
+    }
+}
+
+
+

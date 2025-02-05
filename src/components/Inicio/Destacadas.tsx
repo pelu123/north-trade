@@ -1,62 +1,69 @@
 import "./destacadas.css";
-import properties from "../../mocks/properties.json";
 import { useState, useEffect } from "react";
+import properties from '../../mocks/properties.json'
+import { Properties } from "../../types";
+import { useBoxContext } from "../../context/InfoBoxContext";
 
 
-type Properties = {
-  id: number;
-  name: string;
-  location: string;
-  surface: string;
-  "detailed location": string;
-  description: string;
-  image: string;
-};
 
 export default function Destacadas() {
 
+  const { openBox} = useBoxContext();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slidesToShow, setSlidesToShow] = useState(4);
+  const [cardsToShow, setCardsToShow] = useState(6);
 
-  const updateSlidesToShow = () => {
-    if (window.innerWidth <= 500) {
-      setSlidesToShow(2);
-    } else if (window.innerWidth <= 700) {
-      setSlidesToShow(3);
-    } else {
-      setSlidesToShow(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth
+      if (windowWidth <= 550){
+        setCardsToShow(2)
+      } else if (windowWidth <= 750){
+        setCardsToShow(3)
+      } else if (windowWidth <= 850){
+        setCardsToShow(4)
+      } else {
+        setCardsToShow(6)
+      }
     }
-  }
+    
 
-    useEffect(() => {
-      updateSlidesToShow();
-      window.addEventListener("resize", updateSlidesToShow);
-      return () => window.removeEventListener("resize", updateSlidesToShow);
-    }, [])
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize)
+  }, [properties.length])
+
+  useEffect(() => {
+    const maxIndex = Math.max(0, properties.length - cardsToShow)
+    if (currentIndex > maxIndex){
+      setCurrentIndex(maxIndex)
+    }
+  }, [cardsToShow, properties.length])
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-    prevIndex === properties.length - slidesToShow ? 0 : prevIndex + 1
-    )
+    setCurrentIndex ((prevIndex) => Math.min(prevIndex + 1, properties.length - cardsToShow))
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-    prevIndex === 0 ? properties.length - slidesToShow : prevIndex - 1
-    )
+    setCurrentIndex((prevIndex) => Math.max(prevIndex - cardsToShow, 0))
   }
- 
+
   return (
-    <div >      
+    <div className="destacadas-container">      
       <div
         className="destacadas-cards-container"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        style={{ 
+          transform: `translateX(-${currentIndex * 100 / cardsToShow}%)`,
+          transition: 'transform 0.3s ease-in-out'
+        }}
       >
-        {properties.concat(properties).map((property: Properties, index) => (
+        {properties.map((property: Properties, index: number) => (
           <div
             className="destacadas-card"
-            key={index}
-            style={{ flex: `0 0 ${100 / slidesToShow}%` }}
+            key={`${property.id}-${index}`}
+            style={{ 
+              flex: `0 0 ${100 / cardsToShow}%`,
+            }}
           >
             <div className="destacadas-card-image">
               <img src={property.image} alt={property.name} />
@@ -66,16 +73,24 @@ export default function Destacadas() {
               <p>{property.location}</p> <p>{property.surface}</p>
             </div>
             <div className="card-button">
-              <button>Más información</button>
+              <button onClick={() => openBox(property)}>Más información</button>
             </div>
           </div>
         ))}
       </div>
       <div className="destacadas-slider-buttons">
-        <button className="prev-button" onClick={prevSlide}>
+        <button 
+        className="prev-button" 
+        onClick={prevSlide} 
+        disabled={currentIndex === 0}
+        >
           &#10094;
         </button>
-        <button className="next-button" onClick={nextSlide}>
+        <button 
+        className="next-button" 
+        onClick={nextSlide} 
+        disabled={currentIndex + cardsToShow >= properties.length}
+        >
           &#10095;
         </button>
         </div>

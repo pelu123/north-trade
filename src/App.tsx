@@ -4,6 +4,7 @@ import Inicio from "./pages/Inicio"
 import Contacto from "./pages/Contacto"
 import Propiedades from "./pages/Propiedades"
 import  Navbar  from "./components/Navbar"
+import Footer from "./components/Footer"
 import "../src/pages/Pages.css"
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/propiedades" element={<Propiedades />} />
         </Routes>
       </Container>
+      <Footer />
     </>
   );
 }

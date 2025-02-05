@@ -6,8 +6,13 @@
     "surface": "1000 has",
     "detailed location": "Este hermoso terreno se encuentra estratégicamente ubicado a solo 7 kilómetros al este de Río del Valle, sobre la Ruta Provincial Nº5. Además, está a 16 kilómetros de Las Lajitas y a 200 kilómetros de la Ciudad de Salta.",
     "description": "Se trata de una interesante fracción muy bien ubicada y totalmente desmontada, con excelente aptitud para agricultura, hoy con soja en directa. Se cultiva soja, maíz, porotos, cártamo y sorgo con muy buenos rendimientos. Además, cuenta con un régimen de lluvia de unos 700 a 900 mm anuales.",
+    "features": [
+      "Totalmente desmontada", 
+      "Exelente aptitud para agricultura"
+    ],
     "image": "/properties/lajitas1000has.png"
   },
+
   {
     "id": 2,
     "name": "Campo en San Carlos",
@@ -15,8 +20,16 @@
     "surface": "1000 has",
     "detailed location": "Se encuentra a 900 metros al oeste del pueblo de San Carlos, sobre el camino a San Lucas. Ubicado a 25 km de Cafayate, y 230 km de la Ciudad de Salta.",
     "description": "Este campo cuenta con 50 has limpias donde se cultivan especies y aromáticas, con posibilidad para desarrollar un total de 300 has para viñedos de alta calidad. El resto de la superficie es monte con vegetación característica de la zona. Cuenta con: dos pozos de 60 y 100 mil litros/hora, alambrados, energia electrica, titulos perfectos y exelentes vistas.",
+    "features": [
+      "300 has para desarrollar viñedos de alta calidad", 
+      "Dos pozos de 60 y 100 mil litros/hora",
+      "Alambrados",
+      "Energia electrica",
+      "Títulos perfectos"
+    ],
     "image": "/properties/sanCarlos1000has.png"
   },
+
   {
     "id": 3,
     "name": "Campo en Oran",
@@ -24,8 +37,13 @@
     "surface": "1200 has",
     "detailed location": "El terreno se encuentra ubicado sobre la ruta Provincial Nº5, a altura de la Estacion Chaguaral, a 50 km de la localidad de Las Lajitas y a 250 km de la Ciudad de Salta.",
     "description": "Se trata de tierras planas con 300 has desmontadas, donde se produce poroto y maiz. El resto de la superficie tiene un monte tipico de la zona. Este esta poblado con quebracho colorado y blanco, mistol y algarrobo. Además, cuenta con un régimen de lluvia de unos 700 mm anuales.",
+    "features": [
+      "300 has desmontadas", 
+      "Regimen de lluvia: 700 mm anuales"
+    ],
     "image": "/properties/chaguaral1200has.png"
   },
+
   {
     "id": 4,
     "name": "Bodega El Transito",
@@ -33,6 +51,40 @@
     "surface": "Ocupa 2170 m2 de terreno.",
     "detailed location": "",
     "description": "Se trata de una empresa vitivinicola con bodega de moderna construcción ubicada en el centro de la ciudad de Cafayate, y que cuenta con viñedos propios. Comprende de tres sectores: Bodega, Viñedos y Comercialización.",
+    "features": [
+      "Tres sectores propios: Bodega, Viñedos y Comercialización"
+    ],
     "image": "/properties/elTransitoBodega.png"
+  },
+
+  {
+    "id": 5,
+    "name": "Campo en Yuchan",
+    "location": "Orán, Salta, Argentina",
+    "surface": "906 has",
+    "detailed location": "Ubicada a 14 km de Pichanal(4 kms. Al este de la Ruta Nº 5), a 350 km de la Ciudad de Salta.",
+    "description": "Terreno plano con 600 has limpias. Cuenta con alambrado perimetral en tres de sus deslindes, el resto de la superficie cuenta con vegetacion tipica de la zona. Tiene un régimen de lluvia de unos 700 mm anuales.",
+    "features": [
+      "600 has limpias",
+      "Alambrado perimetral en tres de sus deslindes",
+      "Regimen de lluvia: 700 mm anuales"
+    ],
+    "image": "properties/yuchan900has.png"
+  },
+  
+  {
+    "id": 6,
+    "name": "Terreno en Animaná",
+    "location": "San Carlos, Salta, Argentina",
+    "surface": "57,9 has",
+    "detailed location": "Excelentemente ubicada sobre Ruta Nacional 40 (pavimentada). A 5 km del pueblo de Animaná y a 8 km de Cafayate. A Salta, 187 kms por Ruta nacional 68.",
+    "description": "Impresionantes vistas y entornos. Cuenta con desarrollos de viñedos a ambos lados de la fracción. Esta inserta en un importante polo de desarrollo y explotación vitivinícola y turística, los Valles Calchaquíes. Cuenta con energía eléctrica trifásica. Inmejorable potencial.",
+    "features": [
+      "Desarrollos de viñedos a ambos lados de la fracción",
+      "Inserta en un importante polo de desarrollo y explotación vitivinícola y turística",
+      "Energía eléctrica trifásica",
+      "Inmejorable potencial"
+    ],
+    "image": "properties/animana57has.png"
   }
 ]
