@@ -1,22 +1,17 @@
 /* propiedades.css */
-.propiedades-cards-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
+.slider-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .propiedades-cards-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: flex-start;
+    align-content: center;
     width: 100%;
-    margin-left: 10px;
-    gap: 20px; /* Espacio entre las cards */
+    gap: 20px;
+    padding: 10px;
 }
 
 .propiedades-card {
@@ -52,9 +47,9 @@
 
 /*Slider styles*/
 .propiedades-slider-container {
-    padding: 20px 40px;
     position: relative;
-    display: flex;
+    overflow: hidden; /* Oculta el desbordamiento de las cards */
+    margin-bottom: -20px; /* Evita que el contenido se desplace hacia arriba */
     align-items: center; /* Centra verticalmente los botones y el contenido */
     justify-content: center; /* Centra horizontalmente el contenido */
     width: 100%;
@@ -63,8 +58,15 @@
 }
 
 .propiedades-slider-content {
+    display: flex;   
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px; /* Espacio entre las cards */
     width: 100%; /* Ajusta el ancho del contenido */
     overflow: hidden; /* Oculta el desbordamiento de las cards */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 

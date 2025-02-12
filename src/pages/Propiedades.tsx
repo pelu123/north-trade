@@ -1,7 +1,7 @@
 import headerRural from '../assets/headerRural.png'
 import '../pages/Pages.css'
 import '../components/Propiedades/propiedades.css'
-import CardsSlider from '../components/Propiedades/CardsSlider'
+import CardsPropiedades from '../components/Propiedades/CardsPropiedades'
 
 
 export default function Propiedades() {
@@ -21,9 +21,9 @@ export default function Propiedades() {
                     </p>
                 </div>
             </section>
-            <div className='propiedades-cards-section'>
-                <CardsSlider properties={[]} />
-            </div>
+            <section className='propiedades-cards-section'>
+                <CardsPropiedades />
+            </section>
         </div>
         </>
     )

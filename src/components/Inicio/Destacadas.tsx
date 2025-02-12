@@ -8,7 +8,7 @@ import { useBoxContext } from "../../context/InfoBoxContext";
 
 export default function Destacadas() {
 
-  const { openBox} = useBoxContext();
+  const { openBox } = useBoxContext();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsToShow, setCardsToShow] = useState(6);
 

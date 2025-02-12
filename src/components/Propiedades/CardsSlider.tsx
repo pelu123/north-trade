@@ -1,57 +1,54 @@
 import React, { useState, useEffect } from "react";
 import CardsPropiedades from "./CardsPropiedades";
-import { useMediaQuery, useTheme } from "@mui/material";
 import { Properties } from "../../types";
 import "./propiedades.css";
 
-//Breakpoints for responsiveness
-const BREAKPOINTS = {
-    xs: 550,
-    sm: 750,
-    md: 850,
-}
 
 interface SliderProps {
     properties: Properties[]
 }
 
 const CardsSlider: React.FC<SliderProps> = ({ properties }) => {
-    const theme = useTheme();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsToShow, setCardsToShow] = useState(6);
 
-    // Use useMediaQuery from Material UI to get the breakpoints
-    const isXs = useMediaQuery(theme.breakpoints.down(BREAKPOINTS.xs))
-    const isSm = useMediaQuery(theme.breakpoints.down(BREAKPOINTS.sm))
-    const isMd = useMediaQuery(theme.breakpoints.down(BREAKPOINTS.md))
-
+    // Defining the breakpoints for the slider
     useEffect(() => {
-        if (isXs) {
-            setCardsToShow(2)
-        } else if (isSm) {
-            setCardsToShow(3)
-        } else if (isMd) {
-            setCardsToShow(4)
-        } else {
-            setCardsToShow(6)
+        const handleReasize = () => {
+            const windowWidth = window.innerWidth
+            if (windowWidth >= 550) {
+                setCardsToShow(2)
+            } else if (windowWidth >= 750) {
+                setCardsToShow(3)
+            } else if (windowWidth >= 850) {
+                setCardsToShow(4)
+            } else {
+                setCardsToShow(6)
+            }
         }
-    }, [isXs, isSm, isMd])
+
+        window.addEventListener("resize", handleReasize)
+        handleReasize()
+        return () => window.removeEventListener("resize", handleReasize)
+    }, [properties.length])
+
+
+   
 
     useEffect(() => {
         const maxIndex = Math.max(0, properties.length - cardsToShow)
         if (currentIndex > maxIndex) {
             setCurrentIndex(maxIndex)
         }
-    }, [cardsToShow, properties.length, currentIndex])
+    }, [cardsToShow, properties.length])
 
     const handleNext = () => {
         setCurrentIndex((prev) => Math.min(prev + 1, properties.length - cardsToShow))
     }
 
     const handlePrev = () => {
-        setCurrentIndex((prev) => Math.max(prev - 1, 0))
+        setCurrentIndex((prev) => Math.max(prev - cardsToShow, 0))
     }
-
 
     return (
         <>
@@ -60,9 +57,12 @@ const CardsSlider: React.FC<SliderProps> = ({ properties }) => {
                 &#10094;
             </button>
             <div className="propiedades-slider-content">
-               <CardsPropiedades />
+               {properties.slice(currentIndex, currentIndex + cardsToShow).map((property, index) => (
+                  <CardsPropiedades key={index} properties={[property]}/>  
+                
+               ))}
             </div>            
-            <button className="propiedades-next-button" onClick={handleNext}>
+            <button className="propiedades-next-button" onClick={handleNext} disabled={currentIndex + cardsToShow >= properties.length}>
                 &#10095;
             </button>
         </div>
