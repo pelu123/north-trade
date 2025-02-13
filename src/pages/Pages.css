@@ -25,25 +25,33 @@
   margin-bottom: 10px;
   background: fixed;
   background-color: rgba(58, 58, 58, 0.384);
+  border-radius: 20px;
 }
 
 .header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
   margin-left: 6px;
   font-size: 40px;
   line-height: 48px;
-  color: rgb(119, 0, 0);
+  color: black;
+  padding: 10px;
 }
 
 .header-description {
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight:bold;
-    font-size: 20px; 
-    color: whitesmoke;
-    margin: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight:bold;
+  font-size: 20px; 
+  color: rgb(209, 207, 207);
+  margin: 6px;
 }
 
 .header-buttons {

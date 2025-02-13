@@ -22,6 +22,7 @@ export default function Propiedades() {
                 </div>
             </section>
             <section className='propiedades-cards-section'>
+                <h2 className='title'>Propiedades y campos</h2>
                 <CardsPropiedades />
             </section>
         </div>

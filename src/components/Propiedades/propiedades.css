@@ -1,24 +1,29 @@
 /* propiedades.css */
-.slider-container {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
 .propiedades-cards-container {
     display: flex;
-    justify-content: flex-start;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    gap: 20px;
-    padding: 10px;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
+.propiedades-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 15px; /* Espacio entre las cards */
+    padding: 20px; /* Espaciado exterior */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+  }
 
 .propiedades-card {
     flex: 0 0 auto;
     position: relative;
-    width: 200px; /* Ancho mínimo de cada card */
-    height: 300px; /* Altura de cada card */
+    width: 300px; /* Ancho automatico para ajustarse al grid */
+    height: 400px;
+    aspect-ratio: 4 / 3;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -45,90 +50,27 @@
     text-align: center;
 }
 
-/*Slider styles*/
-.propiedades-slider-container {
-    position: relative;
-    overflow: hidden; /* Oculta el desbordamiento de las cards */
-    margin-bottom: -20px; /* Evita que el contenido se desplace hacia arriba */
-    align-items: center; /* Centra verticalmente los botones y el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
 
-.propiedades-slider-content {
-    display: flex;   
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 20px; /* Espacio entre las cards */
-    width: 100%; /* Ajusta el ancho del contenido */
-    overflow: hidden; /* Oculta el desbordamiento de las cards */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-
-/* Botones de navegación */
-.propiedades-prev-button,
-.propiedades-next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    z-index: 1;
-}
-
-.propiedades-prev-button:hover,
-.propiedades-next-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.propiedades-prev-button {
-    left: 10px;
-}
-
-.propiedades-next-button {
-    right: 10px;
-}
 
 /*Responsive styles*/
-@media (max-width: 550px) {
-    .propiedades-card {
-        width: calc((100% - 20px) / 2); /* 2 cards por vista */
+@media (max-width: 768px) {
+    .propiedades-grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
     }
-}
-
-@media (min-width: 551px) and (max-width: 750px) {
     .propiedades-card {
-        width: calc((100% - 40px) / 3); /* 3 cards por vista */
+        width: 200px;
+        height: 300px;
     }
-}
-
-@media (min-width: 751px) and (max-width: 850px) {
+  }
+  
+  @media (max-width: 480px) {
+    .propiedades-grid-container {
+      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
     .propiedades-card {
-        width: calc((100% - 60px) / 4); /* 4 cards por vista */
+        width: 200px;
+        height: 300px;
     }
-}
-
-@media (min-width: 851px) {
-    .propiedades-card {
-        width: calc((100% - 100px) / 6); /* 6 cards por vista */
-    }
-}
-
+  }
 
 

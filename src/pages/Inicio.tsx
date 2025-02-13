@@ -21,7 +21,8 @@ export default function Inicio() {
                 de Salta
               </h1>
               <p className="header-description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Te ofrecemos la mejor atención y compromiso
+                para que encuentres el campo que necesitas.
               </p>
               <div className="header-buttons">
                 <Button className="button-rurales bg-[rgb(119,0,0)] text-white">
