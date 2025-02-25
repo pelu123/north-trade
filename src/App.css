@@ -95,7 +95,7 @@
     top: 60px;
     right: 0;
     left: auto;
-    background-color: rgb(175, 169, 169, 0.70);
+    background-color: rgb(175, 169, 169);
     width: 100%;
     border-bottom-left-radius: 19px;
     border-bottom-right-radius: 19px;
@@ -125,7 +125,9 @@
   /*Footer styles*/
 .footer-container {
   background-color: rgb(133, 37, 37);
+  padding: 10px;
   display: flex;
+  justify-content: center;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -137,13 +139,13 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1200px;
 }
 
 .footer-routes {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 10px;
   color: #000;
   font-weight: 400;
   width: 33%;
@@ -154,14 +156,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 250%;
   color: #000;
   font-weight: 400;
+  width: 33%;
 }
 
 .insta-button, .facebook-button {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-top: 4px;
 }
 .insta-button, .facebook-button p {
@@ -169,13 +172,23 @@
 }
 
 @media (max-width: 550px) {
-  .social-media-links {
-    margin-left: 90px;
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-}
 
-@media (max-width: 750px) {
+  .footer-routes,
   .social-media-links {
-    margin-left: 160px;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media-links {
+    order: -1;
   }
 }

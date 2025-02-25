@@ -5,6 +5,7 @@ import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import DestacadasWrapper from "../components/Inicio/DestacadasWrapper";
 import ContactForm from "../components/ContactForm";
+import InteractiveMap from "../components/Contacto/InteractiveMap";
 
 
 export default function Inicio() {
@@ -21,8 +22,8 @@ export default function Inicio() {
                 de Salta
               </h1>
               <p className="header-description">
-                Te ofrecemos la mejor atención y compromiso
-                para que encuentres el campo que necesitas.
+                Te ofrecemos la mejor atención y compromiso para que encuentres
+                el campo que necesitas.
               </p>
               <div className="header-buttons">
                 <Button className="button-rurales bg-[rgb(119,0,0)] text-white">
@@ -38,6 +39,9 @@ export default function Inicio() {
               </div>
             </div>
           </section>
+          <section>
+            <InteractiveMap />
+          </section>
           <section className="destacadas-section">
             <h2 className="title">Propiedades destacadas</h2>
             <DestacadasWrapper />
@@ -46,32 +50,42 @@ export default function Inicio() {
             <h2 className="title">¿Quiénes somos?</h2>
             <div className="about-us-text">
               <p className="text">
-              Somos una empresa inmobiliaria rural, con larga experiencia en la
-              compra y venta de campos en la provincia de Salta. Aseguramos
-              seriedad, profesionalidad y absoluta reserva. Contamos con la
-              estructura y logística necesaria para brindar un asesoramiento
-              integral del negocio inmobiliario.
-            </p>
-            </div>                        
+                Somos una empresa inmobiliaria rural, con larga experiencia en
+                la compra y venta de campos en la provincia de Salta. Aseguramos
+                seriedad, profesionalidad y absoluta reserva. Contamos con la
+                estructura y logística necesaria para brindar un asesoramiento
+                integral del negocio inmobiliario.
+              </p>
+            </div>
           </section>
           <section className="contacto-section">
             <div className="contacto-text-section">
-              <h2 className="title">¡Contáctanos hoy mismo!</h2>
-              <p className="text">
-                ¿Interesado en alguna de nuestras propiedades rurales? Estamos
-                aquí para ayudarte. Completa el formulario de contacto con tus
-                datos y detalles sobre la propiedad que te interesa. Nuestro
-                equipo se pondrá en contacto contigo a la brevedad para
-                brindarte toda la información que necesitas. ¡Esperamos saber de
-                ti pronto!
-              </p>
-              <Button className="cta-contacto-button bg-teal-600 text-white">
-                <Link to="/propiedades">
-                  <p>Explora más propiedades</p>
-                </Link>  
-              </Button>              
+              <div className="left-column">
+                <h2 className="title">¡Contáctanos hoy mismo!</h2>
+                {/**Long text for big screens */}
+                <p className="text full-text">
+                  ¿Interesado en alguna de nuestras propiedades rurales? Estamos
+                  aquí para ayudarte. Completa el formulario de contacto con tus
+                  datos y detalles sobre la propiedad que te interesa. Nuestro
+                  equipo se pondrá en contacto contigo a la brevedad para
+                  brindarte toda la información que necesitas. ¡Esperamos saber
+                  de ti pronto!
+                </p>
+                {/**Short text for small screens */}
+                <p className="text short-text">
+                  ¿Interesado en alguna de nuestras propiedades rurales?
+                  Completa el formulario y te contactaremos a la brevedad.
+                </p>
+                <Button className="cta-contacto-button bg-teal-600 text-white">
+                  <Link to="/propiedades">
+                    <p>Explora más propiedades</p>
+                  </Link>
+                </Button>
+              </div>
+              <div className="right-column">
+                <ContactForm />
+              </div>
             </div>
-            <ContactForm />
           </section>
         </div>
       </>

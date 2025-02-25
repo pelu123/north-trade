@@ -2,6 +2,7 @@ import headerRural from '../assets/headerRural.png'
 import '../pages/Pages.css'
 import '../components/Propiedades/propiedades.css'
 import CardsPropiedades from '../components/Propiedades/CardsPropiedades'
+import ContactPropiedades from '../components/Propiedades/ContactPropiedades'
 
 
 export default function Propiedades() {
@@ -24,6 +25,9 @@ export default function Propiedades() {
             <section className='propiedades-cards-section'>
                 <h2 className='title'>Propiedades y campos</h2>
                 <CardsPropiedades />
+            </section>
+            <section className='contacto-props-section'>
+                <ContactPropiedades />
             </section>
         </div>
         </>
